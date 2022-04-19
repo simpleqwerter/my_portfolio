@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>skillbox_lessons</title>
+</head>
+<body>
+    <p>here I use Selenium to parse my courses-site (it's have much JS)
+        <a href="{% url 'update_lessons_info' %}" type="submit">Reload (about 30sec)</a>
+    </p>
+    {% if lessons %}
+        <ul>
+        {% for lesson in lessons.items %}
+            <h1>{{ lesson.0 }}</h1>
+            {% for theme in lesson.1 %}
+                <p>{{ theme.0 }} {{ theme.1 }}</p>
+
+<!--                {% for i in theme %}-->
+<!--                    <p>{{ i }}</p>-->
+<!--                {% endfor %}-->
+            {% endfor %}
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

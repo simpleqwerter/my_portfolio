@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>my portfolio in clean html</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+            font-family: "Roboto";
+        }
+        .navig{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+        }
+        .navig_a{
+            font-size: 24px;
+            color: white;
+            padding-left: 4%;
+            padding-right: 4%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            border: 1px solid black;
+        }
+        .navig_a:hover{
+            background: rgb(0, 255, 200);
+            border: 1px solid black ;
+            border-radius: 50px;
+            padding-left: 4%;
+            padding-right: 4%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            color: black;
+        }
+        .content{
+            min-height: 50vh;
+            max-width: 100vw;
+            background-color: rgb(250, 250, 250);
+            border-radius: 40px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .content_left{
+            display: grid;
+            align-content: space-between;
+            width: 110%;
+            height: 95%;
+            padding: 20px;
+        }
+        .social_icons{
+            width:7%;
+        }
+        .social_icons:hover{
+            width:8%;
+        }
+        .image{
+            padding: 20px;
+            width: 80%;
+            border-radius: 50px;
+            justify-self: end;
+        }
+        .text_h1{
+            font-size: 3em;
+            color: rgb(0, 0, 0);
+        }
+        .text{
+            font-size: 30px;
+            color: rgb(0, 0, 0);
+        }
+        .button{
+            color: white;
+            font-size: 1.5em;
+            padding-left: 3%;
+            padding-right: 3%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            background-color: black;
+            border: 2px solid rgb(0, 255, 200);
+            border-radius: 50px;
+        }
+        .button:hover{
+            background: rgb(0, 255, 200);
+            border: 1px solid white;
+            border-radius: 50px;
+            padding-left: 3%;
+            padding-right: 3%;
+            padding-top: 1.5%;
+            padding-bottom: 1.5%;
+            border: 2px solid rgb(0, 255, 200);
+            color: black;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            gap: 20px;
+            padding: 20px;
+        }
+        .column{
+            border-radius: 50px;;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navig">
+        <a class="navig_a" href="#">Main</a>
+        <a class="navig_a" href="#">Contacts</a>
+        <a class="navig_a" href="#">Portfolio</a>
+        <a class="navig_a" href="tel:+972 58 608 11 06">+972 58 608 11 06</a>
+    </nav>
+    <div class="content">
+        <div class="content_left">
+            <h1 class="text_h1">Hi my name is Sergey Gureev</h1>
+            <p class="text">I've been studying programming for about 2 years, and I don't stop <nobr>doing it - it's </nobr>very interesting to me. I am very proud that I can create something from nothing.</p>
+            <a href="mailto:simpleqwerter@mail.ru?subject=job discussion"><img class="social_icons" src="https://www.svgrepo.com/show/56023/email.svg"></a>
+            <a href="https://www.facebook.com/profile.php?id=100038293160916"><img class="social_icons" src="https://www.svgrepo.com/show/138943/facebook.svg"></a>
+            <a  href="https://telegram.me/GureevSergey"><img class="social_icons" src="https://www.svgrepo.com/show/65315/telegram.svg"></a>
+            <a href="https://www.linkedin.com/in/sergey-gureev-9260b8236/"><img class="social_icons" src="https://www.svgrepo.com/show/158420/linkedin.svg"></a>
+        </div>
+        <img class="image" alt="logo" src="https://media-exp1.licdn.com/dms/image/C4E03AQHMxjsCNNlLPQ/profile-displayphoto-shrink_800_800/0/1648547872231?e=1655337600&v=beta&t=Uoe8DRSqkQ1L0-WPgsJ9ganHp8zCwUxDzXyYK-Gvo3U">
+    </div>
+
+    <div class="container">
+        <div class="column" style="background-color:hsl(192, 100%, 66%)">
+            <h2>Skills and Abilities in</h2>
+            <ul>
+                <li>html</li>
+                <li>css</li>
+                <li>java-script (familiar/introduce)</li>
+                <li>QA</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>Django</li>
+                <li>Flask</li>
+                <li>Slack</li>
+            </ul>
+        </div>
+        <div class="column" style="background-color:#aa9bff">
+            <h2>Experience:</h2>
+            <ul>
+                <li>my portfolio <a href="">link</a></li>
+            </ul>
+        </div>
+        <div class="column" style="background-color:#2fc502">
+            <h2>Education:</h2>
+            <ul>
+                <li><a href="{% url 'skillbox_lessons' %}">Skillbox "Python Developer proffession"</a></li>
+                <li>QA Masa with Igor Goldshmidt</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
